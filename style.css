@@ -7,6 +7,7 @@
 
 }
 
+
 .main-title {
     color: var(--jungle-teal);
     width: 500px;
@@ -15,7 +16,7 @@
 
 .navegacion {
     width: 500px;
-    margin: auto;
+    margin: 2rem auto;
 
 }
 
@@ -25,4 +26,20 @@
 
 a {
     color: var(--jungle-teal);
+}
+
+.card {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: var(--grape-soda);
+    /* margin: 1rem; */
+}
+
+img:hover {
+    filter: grayscale(1);
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
 }
