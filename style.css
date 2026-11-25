@@ -1,45 +1,95 @@
 :root {
-    --thistle: hsla(277, 36%, 83%, 1);
-    --coffee-bean: hsla(358, 89%, 7%, 1);
-    --grape-soda: hsla(314, 31%, 47%, 1);
-    --muted-olive: hsla(81, 21%, 60%, 1);
-    --jungle-teal: hsla(158, 17%, 48%, 1);
+    --text: hsl(210, 28%, 7%);
+    --background: hsl(210, 20%, 98%);
+    --primary: hsl(208, 29%, 53%);
+    --secondary: hsl(257, 28%, 71%);
+    --accent: hsl(272, 29%, 64%);
+}
+
+body.dark-mode {
+    --text: hsl(210, 28%, 93%);
+    --background: hsl(210, 20%, 2%);
+    --primary: hsl(208, 29%, 47%);
+    --secondary: hsl(257, 28%, 29%);
+    --accent: hsl(273, 29%, 36%);
 
 }
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor {
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+.titulo {
+    width: 70%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    text-align: center;
+}
 
 .main-title {
-    color: var(--jungle-teal);
-    width: 500px;
-    margin: 2rem auto;
+    font-size: 2.5rem;
+    color: var(--accent);
 }
 
-.navegacion {
-    width: 500px;
-    margin: 2rem auto;
-
-}
-
-.list-group-item {
-    border-color: var(--grape-soda);
-}
-
-a {
-    color: var(--jungle-teal);
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--text);
 }
 
 .card {
-    padding-left: 0;
-    padding-right: 0;
-    border-color: var(--grape-soda);
-    /* margin: 1rem; */
+    width: 300px;
+    margin: 1rem auto;
+    border-color: var(--secondary);
 }
 
-img:hover {
+a {
+    color: var(--primary);
+}
+
+img {
+    width: 300px;
+    aspect-ratio: 3 / 2;
+}
+
+.card:hover img {
     filter: grayscale(1);
 }
 
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 1.5rem;
+.projects {
+    padding-bottom: 2rem;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 630px) {
+    .projects {
+        max-width: 665px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 940px) {
+    .projects {
+        max-width: 1010px;
+        grid-template-columns: repeat(3,1fr);
+    }
 }
